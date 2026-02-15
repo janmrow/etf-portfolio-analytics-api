@@ -38,9 +38,14 @@ The API returns key numbers such as **volatility** and **maximum drawdown**, and
    pytest
    ```
 
-3. **Run the API (placeholder for now):**
+3. **Run the API:**
    ```bash
    uvicorn app.main:app --reload
+   ```
+
+4. **Health check:**
+   ```bash
+   curl http://127.0.0.1:8000/health
    ```
 
 ---

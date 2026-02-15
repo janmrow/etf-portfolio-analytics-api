@@ -13,6 +13,11 @@ def create_app() -> FastAPI:
             "Built as a learning project focused on API quality and test automation."
         ),
     )
+
+    @app.get("/health")
+    def health() -> dict[str, str]:
+        return {"status": "ok"}
+
     return app
 
 
