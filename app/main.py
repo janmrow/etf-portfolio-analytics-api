@@ -1,10 +1,9 @@
 from fastapi import FastAPI
 
+from app.api.v1.routes_etfs import router as v1_etfs_router
+
 
 def create_app() -> FastAPI:
-    """
-    Application factory to keep the app setup explicit and test-friendly.
-    """
     app = FastAPI(
         title="ETF Portfolio Analytics API",
         version="0.1.0",
@@ -18,6 +17,7 @@ def create_app() -> FastAPI:
     def health() -> dict[str, str]:
         return {"status": "ok"}
 
+    app.include_router(v1_etfs_router)
     return app
 
 
