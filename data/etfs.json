@@ -1,7 +1,7 @@
 [
-  {"symbol": "SPY", "name": "S&P 500 ETF", "currency": "USD", "inception_date": "1993-01-22"},
-  {"symbol": "QQQ", "name": "Nasdaq 100 ETF", "currency": "USD", "inception_date": "1999-03-10"},
-  {"symbol": "IWM", "name": "Russell 2000 ETF", "currency": "USD", "inception_date": "2000-05-22"},
-  {"symbol": "EFA", "name": "Developed Markets ex-US ETF", "currency": "USD", "inception_date": "2001-08-14"},
-  {"symbol": "EEM", "name": "Emerging Markets ETF", "currency": "USD", "inception_date": "2003-04-07"}
+  {"symbol": "VT",  "name": "Vanguard Total World Stock ETF", "currency": "USD", "inception_date": "2018-06-24"},
+  {"symbol": "EEM", "name": "iShares MSCI Emerging Markets ETF", "currency": "USD", "inception_date": "2020-04-07"},
+  {"symbol": "BND", "name": "Vanguard Total Bond Market ETF", "currency": "USD", "inception_date": "2017-04-03"},
+  {"symbol": "GLD", "name": "SPDR Gold Shares", "currency": "USD", "inception_date": "2024-11-18"},
+  {"symbol": "DBC", "name": "Invesco DB Commodity Index Tracking Fund", "currency": "USD", "inception_date": "2023-02-03"}
 ]

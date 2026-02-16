@@ -17,11 +17,11 @@ def test_list_etfs_returns_items_and_count() -> None:
 def test_get_etf_returns_details() -> None:
     client = TestClient(create_app())
 
-    response = client.get("/v1/etfs/SPY")
+    response = client.get("/v1/etfs/VT")
 
     assert response.status_code == 200
     body = response.json()
-    assert body["symbol"] == "SPY"
+    assert body["symbol"] == "VT"
     assert body["currency"] == "USD"
     assert "name" in body
 

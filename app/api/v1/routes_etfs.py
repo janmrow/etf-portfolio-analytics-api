@@ -6,6 +6,7 @@ from pathlib import Path
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 
+from app.config import get_settings
 from app.domain.errors import DomainNotFoundError
 from app.infra.json_store import JsonStore
 from app.infra.repositories import EtfRepository
@@ -25,8 +26,8 @@ def _problem_not_found(request: Request, title: str, detail: str) -> JSONRespons
 
 
 def get_etf_repo() -> EtfRepository:
-    # Simple wiring for now; later we will move to dependency injection.
-    data_path = str(Path("data") / "etfs.json")
+    settings = get_settings()
+    data_path = str(Path(settings.data_dir) / "etfs.json")
     return EtfRepository(store=JsonStore(), data_path=data_path)
 
 
