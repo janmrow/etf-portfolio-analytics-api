@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from app.api.v1.routes_etfs import router as v1_etfs_router
+from app.api.v1.routes_prices import router as v1_prices_router
 
 
 def create_app() -> FastAPI:
@@ -18,6 +19,7 @@ def create_app() -> FastAPI:
         return {"status": "ok"}
 
     app.include_router(v1_etfs_router)
+    app.include_router(v1_prices_router)
     return app
 
 

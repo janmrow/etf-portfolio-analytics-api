@@ -10,6 +10,4 @@ class Settings:
 
 
 def get_settings() -> Settings:
-    # Keep it simple: env var with a safe default.
-    data_dir = os.getenv("DATA_DIR", "data")
-    return Settings(data_dir=data_dir)
+    return Settings(data_dir=os.getenv("DATA_DIR", "data"))
